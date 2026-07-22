@@ -1,0 +1,14 @@
+.wrong {
+    color: red;
+}
+
+.right {
+    color: green;
+}
+
+#output {
+    display: flex;
+}
+.name {
+    flex-direction: row;
+}
