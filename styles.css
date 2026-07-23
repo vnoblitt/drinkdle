@@ -16,12 +16,12 @@
     gap: 0.25rem;
 }
 
-.guess-row1 {
+.row1 {
     display: flex;
     gap: 0.5rem;
 }
 
-.guess-row2 {
+.row2 {
     display: flex;
     gap: 0.5rem;
 }
