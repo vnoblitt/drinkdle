@@ -31,7 +31,7 @@ input.addEventListener('keydown', function(event) {
 
 function checkGuess(input) {
     let guessEntry;
-
+    let cleanInput = input.trim();
     const guessRow1 = document.createElement('div');
     const guessRow2 = document.createElement('div');
     const guessName = document.createElement('div');
@@ -39,12 +39,12 @@ function checkGuess(input) {
     const guessIngredientsCorrect = document.createElement('div');
     const guessIngredientsWrong = document.createElement('div');
 
-    if (!drinks.some((drink) => drink.name.toLowerCase() === input.toLowerCase())) {
-        guessRow1.textContent = `${input} not in database`;
+    if (!drinks.some((drink) => drink.name.toLowerCase() === cleanInput.toLowerCase())) {
+        guessRow1.textContent = `${cleanInput} not in database`;
         output.appendChild(guessRow1);
         return;
     } else {
-        guessEntry = drinks.find((drink) => drink.name.toLowerCase() === input.toLowerCase());
+        guessEntry = drinks.find((drink) => drink.name.toLowerCase() === cleanInput.toLowerCase());
     }
 
     
