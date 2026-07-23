@@ -9,7 +9,7 @@ const attempts = document.getElementById('attempts');
 
 let hardMode = false;
 let won = false;
-let remainingAttempts = 4;
+let remainingAttempts = 5;
 updateAttempts()
 
 hard.addEventListener('change', (event) => {

@@ -20,6 +20,18 @@ export const drinks = [
         altName: 'Bees Knees',
     },
     {
+        name: "Bellini",
+        ingredients: ['peach schnapps'],
+        spirit: 'Wine',
+        altName: 'Belini'
+    },
+    {
+        name: 'Bloody Mary',
+        ingredients: ['tomato juice', 'lemon juice', 'tobasco', 'worcestershire'],
+        spirit: 'Vodka',
+        altName: '',
+    },
+    {
         name: 'Boulevardier',
         ingredients: ['campari', 'sweet vermouth', 'orange peel'],
         spirit: 'Whiskey',
@@ -38,34 +50,28 @@ export const drinks = [
         altName: '',
     },
     {
-        name: 'Cosmopolitan',
-        ingredients: ['cranberry juice', 'lime juice', 'triple sec'],
-        spirit: 'Vodka',
-        altName: 'Cosmo',
-    },
-    {
-        name: 'Dark n Stormy',
-        ingredients: ['ginger beer', 'lime juice'], 
-        spirit: 'Rum',
-        altName: 'Dark and Stormy',
-    },
-    {
-        name: 'Bloody Mary',
-        ingredients: ['tomato juice', 'lemon juice', 'tobasco', 'worcestershire'],
-        spirit: 'Vodka',
-        altName: '',
-    },
-    {
         name: 'Corpse Reviver',
         ingredients: ['triple sec', 'lillet blanc', 'lemon juice', 'absinthe'],
         spirit: 'Gin',
         altName: 'Corpse Reviver #2'
     },
     {
+        name: 'Cosmopolitan',
+        ingredients: ['cranberry juice', 'lime juice', 'triple sec'],
+        spirit: 'Vodka',
+        altName: 'Cosmo',
+    },
+    {
         name: 'Daiquiri',
         ingredients: ['lime juice', 'sugar'],
         spirit: 'Rum',
         altName: 'Daquiri',
+    },
+    {
+        name: 'Dark n Stormy',
+        ingredients: ['ginger beer', 'lime juice'], 
+        spirit: 'Rum',
+        altName: 'Dark and Stormy',
     },
     {
         name: 'French 75',
