@@ -58,5 +58,10 @@ const drinks = [
         name: 'Old Fashioned',
         ingredients: ['bitters', 'sugar', 'orange'],
         spirit: 'whiskey',
+    },
+    {
+        name: 'Moscow Mule',
+        ingredients: ['ginger ale', 'lime juice'],
+        spirit: 'vodka',
     }    
 ];
