@@ -50,6 +50,12 @@ export const drinks = [
         altName: '',
     },
     {
+        name: 'Colorado Bulldog',
+        ingredients: ['coffee liqueur', 'cream', 'cola'],
+        spirit: 'Vodka',
+        altName: 'Bulldog',
+    },
+    {
         name: 'Corpse Reviver',
         ingredients: ['triple sec', 'lillet blanc', 'lemon juice', 'absinthe'],
         spirit: 'Gin',
@@ -74,6 +80,12 @@ export const drinks = [
         altName: 'Dark and Stormy',
     },
     {
+        name: 'Dirty Shirley',
+        ingredients: ['sprite', 'grenadine', 'cherries'],
+        spirit: 'Vodka',
+        altName: 'Shirley Temple',
+    },
+    {
         name: 'French 75',
         ingredients: ['champagne', 'sugar', 'lemon juice'], 
         spirit: 'Gin',
@@ -84,6 +96,18 @@ export const drinks = [
         ingredients: ['lime juice', 'sugar'],
         spirit: 'Gin',
         altName: '',
+    },
+    {
+        name: 'Grasshopper',
+        ingredients: ['creme de menthe', 'creme de cacao', 'cream'],
+        spirit: 'None',
+        altName: '',
+    },
+    {
+        name: 'Harvey Wallbanger',
+        ingredients: ['orange juice', 'galliano'],
+        spirit: 'Vodka',
+        altName: 'Harvey',
     },
     {
         name: 'Mai Tai',
@@ -197,6 +221,12 @@ export const drinks = [
         name: 'Whiskey Sour',
         ingredients: ['lemon juice', 'sugar'], 
         spirit: 'Whiskey',
+        altName: '',
+    },
+    {
+        name: 'White Russian',
+        ingredients: ['coffee liqueur', 'cream'],
+        spirit: 'Vodka',
         altName: '',
     },
 
