@@ -2,6 +2,12 @@
 
 export const drinks = [
     {
+        name: 'Adios',
+        ingredients: ['lemon juice', 'sugar', 'triple sec', 'blue curaçao'],
+        spirit: 'Clear Spirits',
+        altName: 'AMF',
+    },
+    {
         name: 'Aviation',
         ingredients: ['lemon juice', 'maraschino liqueur'],
         spirit: 'Gin',
@@ -92,6 +98,12 @@ export const drinks = [
         altName: '',
     },
     {
+        name: 'Fuzzy Navel',
+        ingredients: ['peach schnapps', 'orange juice'],
+        spirit: 'None',
+        altName: '',
+    },
+    {
         name: 'Gimlet',
         ingredients: ['lime juice', 'sugar'],
         spirit: 'Gin',
@@ -108,6 +120,12 @@ export const drinks = [
         ingredients: ['orange juice', 'galliano'],
         spirit: 'Vodka',
         altName: 'Harvey',
+    },
+    {
+        name: 'Long Island Iced Tea',
+        ingredients: ['lemon juice', 'sugar', 'triple sec'],
+        spirit: 'Clear Spirits',
+        altName: 'Long Island'
     },
     {
         name: 'Mai Tai',
@@ -168,6 +186,12 @@ export const drinks = [
         ingredients: ['grapefruit soda', 'lime juice', 'salt'],
         spirit: 'Tequila', 
         altName: '',
+    },
+    {
+        name: 'Piña Colada',
+        ingredients: ['pineapple juice', 'cream of coconut'],
+        spirit: 'Rum',
+        altName: 'Pina Colada',
     },
     {
         name: 'Ranch Water',
@@ -232,3 +256,11 @@ export const drinks = [
 
 
 ];
+
+export const order = [
+    [3, 35, 29, 41, 19, 18, 7, 21, 6, 4,
+    13, 16, 33, 2, 39, 25, 1, 31, 23,
+    26, 27, 34, 15, 10, 9, 30, 14, 28,
+    5, 38, 20, 32, 11, 37, 12, 40, 17,
+    0, 36, 22, 8, 24]
+]

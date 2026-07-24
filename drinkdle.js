@@ -1,4 +1,5 @@
 import { drinks } from './drinks.js';
+import { order } from './drinks.js';
 
 const input = document.getElementById('input');
 const output = document.getElementById('output');
@@ -179,14 +180,18 @@ function checkGuess(input) {
 
 function getDrink() {
     const now = new Date();
-    return drinks[now.getDate() - 1];
+    let picker = order[now.getDate()];
+    if (now.getMonth() > 6) {
+        picker = order[now.getDate() + 31] // Runs out of drinks on August 10th I think
+    }
+    return drinks[picker];
 }
 
 function getArray() {
     return drinks.length;
 }
 
-console.log(getArray());
+console.log();
 
 const loserDrinks = [
     'Vodka Martini', 'Pisco Sour', 'Screwdriver', 'Vesper',
