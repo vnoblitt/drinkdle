@@ -4,6 +4,10 @@
     color: #E9C46A;
 }
 
+input {
+    background-color: white;
+}
+
 .header {
     font-size: 60px;
     font-weight: bold;
