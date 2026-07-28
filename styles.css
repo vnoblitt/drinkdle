@@ -1,19 +1,52 @@
 * {
     padding: 5px;
+    background-color: #264653;
+    color: #E9C46A;
+}
+
+.header {
+    font-size: 60px;
+    font-weight: bold;
+    color: #E9C46A;
+    background-color: #2A9D8F;
+    border: 3px solid #F4A261;
+    border-radius: 15px;
+    align-self: center;
+}
+
+.game-info {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .wrong {
-    color: red;
+    color: #E76F51;;
 }
 
 .right {
-    color: green;
+    color: #90BE6D;
+}
+
+#reveal {
+    background-color: #E76F51;
+    color: #E9C46A;
 }
 
 #output {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+}
+
+#submit {
+    background-color: #2A9D8F;
+}
+
+.guess-group {
+    border: 2px solid #2A9D8F;
+    padding: 0.5rem;
+    border-radius: 8px;
 }
 
 .row1 {
@@ -24,4 +57,11 @@
 .row2 {
     display: flex;
     gap: 0.5rem;
+}
+
+span.size-48 {
+  font-size: 48px;
+  font-variation-settings: 'OPSZ' 48;
+  color: #E9C46A;
+  background-color: #2A9D8F;
 }

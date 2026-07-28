@@ -10,7 +10,7 @@ const attempts = document.getElementById('attempts');
 
 let hardMode = false;
 let won = false;
-let remainingAttempts = 5;
+let remainingAttempts = 6;
 updateAttempts()
 
 hard.addEventListener('change', (event) => {
@@ -48,7 +48,48 @@ input.addEventListener('keydown', function(event) {
         }
     };
 });
+/* Eventually I want to store attempts so that refreshing the
+    page won't restart the game. I'm not implementing this now because 
+    A) It requires me to rewrite a lot of the structure of the code
+    B) I got this from google ai and I don't trust that I really undertand
+        it well enough to consider it 'learned'
 
+const gameState = {
+    lastPlayed: '2026-07-23',
+    remainingAttempts: 6,
+    guesses: [],
+    won: false,
+}
+
+function loadGame() {
+    const today = new Date().toISOString().split('T')[0] // We only want YYYY-MM-DD
+    let saveData = JSON.parse(localStorage.getItem('gameState'));
+
+    if(!saveData || saveData.lastPlayed !== today) {
+        saveData = {
+            lastPlayed: today,
+            remainingAttempts: 6,
+            guesses: [],
+            won: false,
+        };
+        localStorage.setItem('gameState', JSON.stringify(saveData));
+    }
+    return saveData;
+}
+
+function recordGuess(guessEntry) {
+    let progress = loadGame();
+    if (progress.won) return;
+    progress.guesses.push(input);
+    progress.attempts -= 1;
+
+    if (guessEntry.name === getDrink().name || progress.attempts === 0) {
+        progress.won = true;
+    }
+
+    localStorage.setItem('gameState', JSON.stringify(progress));
+}
+*/
 function updateAttempts() {
     attempts.textContent = `Remaining Guesses: ${remainingAttempts}`;
 }
@@ -99,6 +140,7 @@ function checkGuess(input) {
     
     const guessRow1 = document.createElement('div');
     const guessRow2 = document.createElement('div');
+    const guessGroup = document.createElement('div');
     const guessName = document.createElement('div');
     const guessSpirit = document.createElement('div');
     const guessIngredientsCorrect = document.createElement('div');
@@ -127,6 +169,7 @@ function checkGuess(input) {
         }
     }
     
+    guessGroup.classList.add('guess-group');
     guessRow1.classList.add('row1');
     guessRow2.classList.add('row2');
     guessName.textContent = `Drink: ${guessEntry.name}`;
@@ -166,11 +209,11 @@ function checkGuess(input) {
     guessRow1.appendChild(guessSpirit);
     guessRow2.appendChild(guessIngredientsWrong);   // These two are flipped for aesthetic reasons
     guessRow2.appendChild(guessIngredientsCorrect); // even though it looks sloppy in code
-    output.appendChild(guessRow1);
+    guessGroup.appendChild(guessRow1);
     if (!hardMode) {
-        output.appendChild(guessRow2);
-    
+        guessGroup.appendChild(guessRow2);
     }
+    output.appendChild(guessGroup);
     if (guessEntry.name === getDrink().name) {
         return gameWon();
     } else if (!remainingAttempts) {
